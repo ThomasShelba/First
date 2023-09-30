@@ -1,0 +1,19 @@
+import discord
+from discord.ext import commands
+
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='/', intents=intents)
+
+@bot.command()
+async def trash(ctx, trash_type):
+    await ctx.send(f"Ваш мусор: {trash_type}")
+
+@bot.command()
+async def botle(ctx,botle):
+    await ctx.send(f"Бутылка есть три типа переработки механический, химический и термический. Механическая переработка – способ, при котором пластик сортируют, моют, дробят и делают гранулу. При механическом методе полимерную цепочку пластика не разрушают, а очищают, измельчают и плавят подготовленный материал")
+
+
+bot.run("")
